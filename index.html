@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>French Verb Conjugator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <div class="flag">🇫🇷</div>
+
+        <h1>French Verb Conjugator</h1>
+
+        <p class="subtitle">
+            Enter a French verb to see its conjugations.
+        </p>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="verbInput"
+                placeholder="Try parler, finir, venir..."
+                autocomplete="off"
+            >
+
+            <button id="conjugateButton">
+                Conjugate
+            </button>
+        </div>
+
+        <div class="examples">
+            <span>Examples:</span>
+            <button class="example">parler</button>
+            <button class="example">finir</button>
+            <button class="example">être</button>
+            <button class="example">avoir</button>
+        </div>
+
+        <div id="results"></div>
+
+    </main>
+
+    <script src="js/verbData.js"></script>
+    <script src="js/families.js"></script>
+    <script src="js/conjugator.js"></script>
+    <script src="js/renderer.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

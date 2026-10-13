@@ -1,0 +1,437 @@
+/* ========================================
+   GENERAL PAGE
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef4ff,
+            #ffffff,
+            #fff0f2
+        );
+
+    color: #20242c;
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 70px 20px;
+}
+
+
+/* ========================================
+   MAIN CONTAINER
+======================================== */
+
+.container {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.flag {
+    font-size: 55px;
+
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin: 0;
+
+    font-size: 42px;
+
+    letter-spacing: -1px;
+}
+
+.subtitle {
+    color: #6b7280;
+
+    font-size: 17px;
+
+    margin-top: 12px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   SEARCH BOX
+======================================== */
+
+.search-box {
+    background: white;
+
+    padding: 10px;
+
+    border-radius: 16px;
+
+    display: flex;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0, 0, 0, 0.08);
+
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+#verbInput {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 18px;
+
+    padding: 15px 18px;
+
+    border-radius: 10px;
+}
+
+#conjugateButton {
+    border: none;
+
+    background: #2446a8;
+
+    color: white;
+
+    padding: 0 25px;
+
+    border-radius: 11px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+#conjugateButton:hover {
+    background: #183483;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ========================================
+   EXAMPLE BUTTONS
+======================================== */
+
+.examples {
+    margin-top: 22px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    color: #777;
+}
+
+.example {
+    border:
+        1px solid #ddd;
+
+    background:
+        rgba(255, 255, 255, 0.7);
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    color: #444;
+
+    transition: 0.2s;
+}
+
+.example:hover {
+    background: white;
+
+    border-color: #2446a8;
+
+    color: #2446a8;
+}
+
+
+/* ========================================
+   RESULTS
+======================================== */
+
+#results {
+    margin-top: 40px;
+}
+
+
+/* ========================================
+   MAIN RESULT CARD
+======================================== */
+
+.result-card {
+    background: white;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    text-align: left;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+/* ========================================
+   VERB HEADER
+======================================== */
+
+.verb-header {
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items: center;
+
+    border-bottom:
+        1px solid #eee;
+
+    padding-bottom: 18px;
+
+    margin-bottom: 25px;
+}
+
+.verb-header h2 {
+    margin: 0;
+
+    font-size: 30px;
+
+    text-transform: lowercase;
+}
+
+.verb-type {
+    background: #eef2ff;
+
+    color: #2446a8;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* ========================================
+   MOOD TITLE
+======================================== */
+
+.mood-title {
+    text-align: center;
+    color: #2449ad;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    /* More space between sections */
+    margin-top: 42px;
+    margin-bottom: 32px;
+}
+
+/* The first mood (Indicatif) doesn't need as much space above it */
+.verb-header + .mood-title {
+    margin-top: 28px;
+}
+
+/* ========================================
+   TENSE GRID
+======================================== */
+
+.tense-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(250px, 1fr)
+        );
+
+    gap: 18px;
+}
+
+
+/* ========================================
+   TENSE CARDS
+======================================== */
+
+.tense-card {
+    border:
+        1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    background: #ffffff;
+}
+
+.tense-card h3 {
+    margin-top: 0;
+
+    color: #2446a8;
+
+    border-bottom:
+        1px solid #eee;
+
+    padding-bottom: 12px;
+}
+
+
+/* ========================================
+   CONJUGATION LIST
+======================================== */
+
+.conjugation-list {
+    display: grid;
+
+    gap: 4px;
+}
+
+.conjugation-row {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    padding: 11px 15px;
+
+    border-radius: 8px;
+}
+
+.conjugation-row:nth-child(odd) {
+    background: #f7f8fb;
+}
+
+.conjugation-row span {
+    color: #666;
+}
+
+.conjugation-row strong {
+    color: #20242c;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding:
+            40px 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .search-box {
+        flex-direction:
+            column;
+    }
+
+    #conjugateButton {
+        padding: 15px;
+
+        margin-top: 5px;
+    }
+
+    .verb-header {
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap: 10px;
+    }
+
+}
+
+/* ========================================
+   LONGER CONJUGATION FORMS
+======================================== */
+
+.conjugation-row {
+    grid-template-columns: 90px minmax(0, 1fr);
+    align-items: center;
+    column-gap: 10px;
+}
+
+.conjugation-row strong {
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.combined-form {
+    display: block;
+}
+
+.combined-form strong {
+    display: block;
+    width: 100%;
+}
+
+.tense-grid {
+    grid-template-columns:
+        repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.result-card {
+    max-width: 1000px;
+}
